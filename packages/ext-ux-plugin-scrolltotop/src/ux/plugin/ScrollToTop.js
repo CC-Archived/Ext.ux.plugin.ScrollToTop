@@ -1,5 +1,5 @@
 /*
-Ext.ux.plugin.ScrollToTop - Sencha Touch 'Scroll to Top' Plugin for Ext.List
+Ext.ux.plugin.ScrollToTop - "Scroll to Top" plugin for Sencha Touch's Ext.List component
 http://github.com/CodeCatalyst/Ext.ux.plugin.ScrollToTop
 
 @author John Yanarella
