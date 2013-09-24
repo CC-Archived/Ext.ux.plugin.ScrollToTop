@@ -1,4 +1,4 @@
 Ext.ux.plugin.ScrollToTop
 =========================
 
-"Scroll to Top" Plugin for Sencha Touch's Ext.List Component
+This plugin augments the Sencha Touch Ext.List component to add a floating "Scroll to Top" button above the list once a user scrolls past a configurable threshold.
