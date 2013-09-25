@@ -1,0 +1,60 @@
+/**
+ * @class Ext.ux.plugin.ScrollToTop
+ */
+
+.x-ux-list-scrolltotop {
+	position: relative; 
+	z-index: 1; 
+	padding-top: $ux-list-scrolltotop-padding;
+	text-align: center;
+
+	.x-ux-list-scrolltotop-button {
+		display: inline-block;
+		position: relative;
+		height: $ux-list-scrolltotop-button-height;
+		padding: $ux-list-scrolltotop-button-padding;
+		border: $ux-list-scrolltotop-button-border-width solid $ux-list-scrolltotop-button-border-color;
+		@include border-radius($ux-list-scrolltotop-button-radius);
+		background-color: $ux-list-scrolltotop-button-color;
+		@include background-gradient($ux-list-scrolltotop-button-color, $ux-list-scrolltotop-button-gradient);
+		@if $ux-list-scrolltotop-button-shadow {
+		@include box-shadow($ux-list-scrolltotop-button-shadow-offset-x $ux-list-scrolltotop-button-shadow-offset-y $ux-list-scrolltotop-button-shadow-blur-radius $ux-list-scrolltotop-button-shadow-spread-radius rgba($ux-list-scrolltotop-button-shadow-color, $ux-list-scrolltotop-button-shadow-opacity));
+		}
+		font-family: $ux-list-scrolltotop-button-font-family;
+		font-size: $ux-list-scrolltotop-button-font-size;
+		font-weight: $ux-list-scrolltotop-button-font-weight;
+		
+		.x-ux-list-scrolltotop-text {
+			@if $ux-list-scrolltotop-button-icon-alignment == 'left' {
+				padding: 0 $ux-list-scrolltotop-button-text-padding 0 ($ux-list-scrolltotop-button-text-padding + $ux-list-scrolltotop-button-icon-spacing + $ux-list-scrolltotop-button-icon-width);
+			}
+			@elseif $ux-list-scrolltotop-button-icon-alignment == 'right' {
+				padding: 0 ($ux-list-scrolltotop-button-text-padding + $ux-list-scrolltotop-button-icon-spacing + $ux-list-scrolltotop-button-icon-width) 0 $ux-list-scrolltotop-button-text-padding;
+			}
+			@else {
+				padding: 0 $ux-list-scrolltotop-button-text-padding 0 $ux-list-scrolltotop-button-text-padding;
+			}
+			line-height: ($ux-list-scrolltotop-button-height - 2 * $ux-list-scrolltotop-button-padding - 2 * $ux-list-scrolltotop-button-border-width);
+			color: $ux-list-scrolltotop-button-text-color;
+			@if $ux-list-scrolltotop-button-text-shadow {
+				text-shadow: $ux-list-scrolltotop-button-text-shadow-offset-x $ux-list-scrolltotop-button-text-shadow-offset-y $ux-list-scrolltotop-button-text-shadow-blur-radius rgba($ux-list-scrolltotop-button-text-shadow-color, $ux-list-scrolltotop-button-text-shadow-opacity);
+			}
+		}
+		
+		&:after {
+			position: absolute;
+			content: $ux-list-scrolltotop-button-icon-content;
+			top: (($ux-list-scrolltotop-button-height - $ux-list-scrolltotop-button-icon-height ) / 2);
+			@if $ux-list-scrolltotop-button-icon-alignment == 'left' {
+				left: ($ux-list-scrolltotop-button-padding + $ux-list-scrolltotop-button-text-padding);
+			}
+			@elseif $ux-list-scrolltotop-button-icon-alignment == 'right' {
+				right: ($ux-list-scrolltotop-button-padding + $ux-list-scrolltotop-button-text-padding);
+			}
+			font-family: $ux-list-scrolltotop-button-icon-font-family;
+			font-size: $ux-list-scrolltotop-button-icon-font-size;
+			font-weight: $ux-list-scrolltotop-button-icon-font-weight;
+			color: $ux-list-scrolltotop-button-icon-color;
+		}
+	}
+}

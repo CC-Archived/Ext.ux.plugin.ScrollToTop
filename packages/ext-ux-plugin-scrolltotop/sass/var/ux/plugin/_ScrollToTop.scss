@@ -1,0 +1,214 @@
+/**
+ * @class Ext.ux.plugin.ScrollToTop
+ */
+
+/**
+ * @var {number}
+ * Padding between the top of the list and the floating button.
+ */
+$ux-list-scrolltotop-padding: 10px !default;
+
+/*
+ * @var {measurement}
+ * Padding for the floating button.
+ */
+$ux-list-scrolltotop-button-padding: 6px !default;
+
+/*
+ * @var {measurement}
+ * Height for the floating button.
+ */
+$ux-list-scrolltotop-button-height: 34px !default;
+
+/**
+ * @var {color}
+ * Background color for the floating button.
+ */
+$ux-list-scrolltotop-button-color: $base-color !default;
+
+/**
+ * @var {string}
+ * Background gradient for the floating button.
+ */
+$ux-list-scrolltotop-button-gradient: $base-gradient !default;
+
+/*
+ * @var {color}
+ * Border color for the floating button.
+ */
+$ux-list-scrolltotop-button-border-color: $ux-list-scrolltotop-button-color !default;
+
+/*
+ * @var {measurement}
+ * Border width for the floating button.
+ */
+$ux-list-scrolltotop-button-border-width: 1px !default;
+
+/*
+ * @var {measurement}
+ * Border radius for the floating button.
+ */
+$ux-list-scrolltotop-button-radius: 16px !default;
+
+/**
+ * @var {boolean}
+ * Indicates whether the floating button should have a shadow.
+ */
+$ux-list-scrolltotop-button-shadow: true !default;
+
+/**
+ * @var {measurement}
+ * X offset for the floating button's shadow.
+ */
+$ux-list-scrolltotop-button-shadow-offset-x: 0 !default;
+
+/**
+ * @var {measurement}
+ * Y offset for the floating button's shadow.
+ */
+$ux-list-scrolltotop-button-shadow-offset-y: 2px !default;
+
+/**
+ * @var {measurement}
+ * Blur radius for the floating button's shadow.
+ */
+$ux-list-scrolltotop-button-shadow-blur-radius: 4px !default;
+
+/**
+ * @var {measurement}
+ * Spread radius for the floating button's shadow.
+ */
+$ux-list-scrolltotop-button-shadow-spread-radius: 0 !default;
+
+/**
+ * @var {color}
+ * Color for the floating button's shadow.
+ */
+$ux-list-scrolltotop-button-shadow-color: #000 !default;
+
+/**
+ * @var {number}
+ * Opacity for the floating button's shadow.
+ */
+$ux-list-scrolltotop-button-shadow-opacity: 0.2 !default;
+
+/*
+ * @var {font-family}
+ * Font family for the floating button text.
+ */
+$ux-list-scrolltotop-button-font-family: $font-family !default;
+
+/*
+ * @var {number}
+ * Font size for the floating button text.
+ */
+$ux-list-scrolltotop-button-font-size: 14px !default;
+
+/*
+ * @var {string}
+ * Font size for the floating button text.
+ */
+$ux-list-scrolltotop-button-font-weight: bold !default;
+
+/*
+ * @var {color}
+ * Color for the floating button text.
+ */
+$ux-list-scrolltotop-button-text-color: color-by-background($ux-list-scrolltotop-button-color) !default;
+
+/*
+ * @var {measurement}
+ * Left and right padding for the floating button text.
+ */
+$ux-list-scrolltotop-button-text-padding: 10px !default;
+
+/*
+ * @var {boolean}
+ * Indicates whether the floating button text should have a shadow.
+ */
+$ux-list-scrolltotop-button-text-shadow: true !default;
+
+/*
+ * @var {measurement}
+ * X offset for the floating button text's shadow.
+ */
+$ux-list-scrolltotop-button-text-shadow-offset-x: 1px !default;
+
+/*
+ * @var {measurement}
+ * Y offset for the floating button text's shadow.
+ */
+$ux-list-scrolltotop-button-text-shadow-offset-y: 1px !default;
+
+/*
+ * @var {measurement}
+ * Blur radius for the floating button text's shadow.
+ */
+$ux-list-scrolltotop-button-text-shadow-blur-radius: 0 !default;
+
+/*
+ * @var {color}
+ * Color for the floating button text's shadow.
+ */
+$ux-list-scrolltotop-button-text-shadow-color: color-by-background($ux-list-scrolltotop-button-text-color) !default;
+
+/*
+ * @var {number}
+ * Opacity for the floating button text's shadow.
+ */
+$ux-list-scrolltotop-button-text-shadow-opacity: 1.0 !default;
+
+/*
+ * @var {string}
+ * Alignment for the floating button icon (left or right).
+ */
+$ux-list-scrolltotop-button-icon-alignment: left !default;
+
+/*
+ * @var {measurement}
+ * Spacing between the floating button text and icon.
+ */
+$ux-list-scrolltotop-button-icon-spacing: 4px !default;
+
+/*
+ * @var {string}
+ * Content for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-content: icon-character-for-name(arrow_up) !default;
+
+/*
+ * @var {font-family}
+ * Font family for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-font-family: Pictos !default;
+
+/*
+ * @var {measurement}
+ * Font size for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-font-size: $ux-list-scrolltotop-button-font-size !default;
+
+/*
+ * @var {font-family}
+ * Font weight for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-font-weight: normal !default;
+
+/*
+ * @var {measurement}
+ * Width for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-width: $ux-list-scrolltotop-button-icon-font-size !default;
+
+/*
+ * @var {measurement}
+ * Height for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-height: $ux-list-scrolltotop-button-icon-font-size !default;
+
+/*
+ * @var {color}
+ * Color for the floating button icon.
+ */
+$ux-list-scrolltotop-button-icon-color: $ux-list-scrolltotop-button-text-color !default;
+
