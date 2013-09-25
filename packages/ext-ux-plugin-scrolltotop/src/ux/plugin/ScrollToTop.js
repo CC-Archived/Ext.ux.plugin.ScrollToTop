@@ -28,9 +28,6 @@ THE SOFTWARE.
 Ext.define('Ext.ux.plugin.ScrollToTop', {
 	extend: 'Ext.Component',
 	alias: 'plugin.scrolltotop',
-	requires: [
-		'Ext.Anim'
-	],
 	
 	config: {
 		list: null,
@@ -43,7 +40,9 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 		
 		tpl: [
 			'<div class="x-ux-list-scrolltotop">',
-				'<span class="x-ux-list-scrolltotop-text">{text}</span>',
+				'<div class="x-ux-list-scrolltotop-button">',
+					'<span class="x-ux-list-scrolltotop-text">{text}</span>',
+				'</div>',
 			'</div>'
 		].join(''),
 		
@@ -57,8 +56,6 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 			direction: 'up'
 		}
 	},
-	
-	isActive: false,
 	
 	initialize: function () {
 		this.active = false;
