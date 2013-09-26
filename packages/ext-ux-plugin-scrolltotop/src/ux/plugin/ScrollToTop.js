@@ -30,14 +30,42 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 	alias: 'plugin.scrolltotop',
 	
 	config: {
+		/**
+		 * @cfg {Ext.dataview.List} list
+		 * The list to which this ScrollToTop plugin is connected.
+		 * This will usually be set automatically when configuring the list with this plugin.
+		 * @accessor
+		 */
 		list: null,
+		
+		/**
+		 * @cfg {Boolean} active Indicates whether the floating button is currently visible and active.
+		 * @accessor
+		 */
 		active: false,
+		
+		/**
+		 * @cfg {String} text Text for the floating button.
+		 * @accessor
+		 */
 		text: 'Scroll to Top',
+		
+		/**
+		 * @cfg {Number} yThreshold Vertical scrollbar threshold at which to toggle the visible and active state of the floating button.
+		 * @accessor
+		 */
 		yThreshold: 160,
+		
+		/**
+		 * @cfg {Object} scrollAnimation Configuration for the "scroll to top" animation.
+		 */
 		scrollAnimation: {
 			duration: 300
 		},
 		
+		/**
+		 * @inheritdoc
+		 */
 		tpl: [
 			'<div class="x-ux-list-scrolltotop">',
 				'<div class="x-ux-list-scrolltotop-button">',
@@ -46,17 +74,31 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 			'</div>'
 		].join(''),
 		
+		/**
+		 * @inheritdoc
+		 */
 		hidden: true,
+		
+		/**
+		 * @inheritdoc
+		 */
 		showAnimation: {
 			type: 'slideIn',
 			direction: 'down'
 		},
+		
+		/**
+		 * @inheritdoc
+		 */
 		hideAnimation: {
 			type: 'slideOut',
 			direction: 'up'
 		}
 	},
 	
+	/**
+	 * @inheritdoc
+	 */
 	initialize: function () {
 		this.active = false;
 		
@@ -66,11 +108,17 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 		this.callParent(arguments);
 	},
 	
+	/**
+	 * @inheritdoc
+	 */
 	init: function(list) {
 		this.setList(list);
 		this.initScrollable();
 	},
 	
+	/**
+	 * @private
+	 */
 	initScrollable: function() {
 		var list = this.getList();
 		var scrollable = list.getScrollable();
@@ -115,12 +163,20 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 		}
 	},
 	
+	/**
+	 * Render the template based on the current configuration.
+	 * @private
+	 */
 	renderContent: function () {
 		this.updateData({
 			text: this.getText()
 		});
 	},
 	
+	/**
+	 * Handle a 'tap' event.
+	 * @private
+	 */
 	onTap: function () {
 		var list = this.getList();
 		var scrollable = list.getScrollable();
@@ -130,10 +186,18 @@ Ext.define('Ext.ux.plugin.ScrollToTop', {
 		}
 	},
 	
+	/**
+	 * Handle a 'scrollablechange' event from the list.
+	 * @private
+	 */
 	onListScrollableChange: function(container, value, oldValue, eOpts) {
 		this.initScrollable();
 	},
 	
+	/**
+	 * Handle a 'scroll' event from the list.
+	 * @private
+	 */
 	onListScroll: function (scroller, x, y, eOpts) {
 		this.setActive(y >= this.getYThreshold());
 	}
