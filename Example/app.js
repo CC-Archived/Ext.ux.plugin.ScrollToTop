@@ -16,7 +16,7 @@
 //<debug>
 Ext.Loader.setPath({
     'Ext': '../touch/src',
-    'Ext.ux.plugin': 'packages/ext-ux-plugin-scrolltotop/src/ux/plugin'
+    'Ext.ux.plugin': '../packages/ext-ux-plugin-scrolltotop/src/ux/plugin'
 });
 //</debug>
 
